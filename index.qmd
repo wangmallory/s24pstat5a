@@ -1,12 +1,11 @@
 ---
 title: "PSTAT 5A: Understanding Data"
-subtitle: "Summer Session A, 2023 <br /> Instructor: Ethan P. Marzban"
+subtitle: "Summer Session A, 2024 <br /> Instructor: Mallory Wang"
 ---
 
-Welcome to the official course site for PSTAT 5A (titled Understanding Data) at the University of California, Santa Barbara! Please note that this is the site for **Summer Session A, 2023** iteration of the course, with Ethan Marzban. \
+Welcome to the official course site for PSTAT 5A (titled Understanding Data) at the University of California, Santa Barbara! Please note that this is the site for **Summer Session A, 2024** iteration of the course, with Mallory Wang. \
 
 All relevant information for the course can be found on this site, with the (perhaps crucial) exception of quizzes, which will take place on the course Gradescope site. \
 
 If you are looking for a past iteration of this course, please navigate to <a href="https://pstat5a-archives.github.io" target = "_blank">https://pstat5a-archives.github.io</a>. \
 
-This site will be archived soon.
