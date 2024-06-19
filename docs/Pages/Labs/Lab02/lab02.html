@@ -218,7 +218,7 @@ window.Quarto = {
 <section id="lists" class="level3">
 <h3 class="anchored" data-anchor-id="lists">Lists</h3>
 <p>Perhaps the most fundamental data structure in Python is that of a <strong>list.</strong> Just like lists in real life or in mathematics, Python lists are just collections of items enclosed in square brackets:</p>
-<div id="948d4101" class="cell" data-execution_count="1">
+<div id="6c9affcc" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>item <span class="dv">1</span><span class="op">&gt;</span>, <span class="op">&lt;</span>item <span class="dv">2</span><span class="op">&gt;</span>, ..., <span class="op">&lt;</span>item n<span class="op">&gt;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Again, the items in a list can be of any data type; we can even mix and match data types!</p>
@@ -256,7 +256,7 @@ Task 1 (cont’d)
 <p>Alright, now that we can store data in lists, how can we <em>access</em> elements in a list? The answer is to use what is known as <strong>indexing.</strong><br>
 </p>
 <p>Given a list <code>x</code>, we access the <code>i</code><sup>th</sup> element using the code</p>
-<div id="4d98e5ab" class="cell" data-execution_count="2">
+<div id="54b94543" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x[i]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The reason we call this “indexing” is because the number that goes between the brackets is the <em>index</em> of the element that we want.</p>
@@ -320,7 +320,7 @@ Task 3
 <p>Another very useful data structure in Python is that of a <strong>table</strong>. Python tables behave pretty much the same as the tables we’ve used in, say, math- they are a grid of values arranged sequentially.<br>
 </p>
 <p>Tables can be created using the <code>Table()</code> function in Python, which itself comes from the <code>datascience</code> module. The general syntax of creating a table with the <code>Table()</code> function is:</p>
-<div id="9ce50801" class="cell" data-execution_count="4">
+<div id="1860fab3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Table().with_columns(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;col 1 name&gt;"</span>, [<span class="op">&lt;</span>col <span class="dv">1</span>, val <span class="dv">1</span><span class="op">&gt;</span>, <span class="op">&lt;</span>col <span class="dv">1</span>, val <span class="dv">2</span><span class="op">&gt;</span>, ... ],</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;col 2 name&gt;"</span>, [<span class="op">&lt;</span>col <span class="dv">2</span>, val <span class="dv">1</span><span class="op">&gt;</span>, <span class="op">&lt;</span>col <span class="dv">2</span>, val <span class="dv">2</span><span class="op">&gt;</span>, ... ],</span>
@@ -328,7 +328,7 @@ Task 3
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For example,</p>
-<div id="4b9db812" class="cell" data-execution_count="5">
+<div id="f8970254" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Table().with_columns(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Name"</span>, [<span class="st">"Ethan"</span>, <span class="st">"Morgan"</span>, <span class="st">"Amy"</span>],</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ID"</span>, [<span class="dv">12345</span>, <span class="dv">10394</span>, <span class="dv">20343</span>],</span>
@@ -364,7 +364,7 @@ Task 3
 </div>
 </div>
 <p>There is nothing stopping us from assigning a table to a variable! For example, after running</p>
-<div id="2b0854f8" class="cell" data-execution_count="6">
+<div id="07733c74" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>table1 <span class="op">=</span> Table().with_columns(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Name"</span>, [<span class="st">"Ethan"</span>, <span class="st">"Morgan"</span>, <span class="st">"Amy"</span>],</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"ID"</span>, [<span class="dv">12345</span>, <span class="dv">10394</span>, <span class="dv">20343</span>],</span>
@@ -372,7 +372,7 @@ Task 3
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>the variable <code>table1</code> is equivalent to the table displayed above:</p>
-<div id="5704014e" class="cell" data-execution_count="7">
+<div id="0097b85d" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>table1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -414,14 +414,14 @@ Terminology
 </div>
 <div class="callout-body-container callout-body">
 <p>Sometimes in Python we will encounter expressions of the form</p>
-<div id="16cd234a" class="cell" data-execution_count="8">
+<div id="51110264" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="bu">object</span> <span class="bu">type</span><span class="op">&gt;</span>.<span class="op">&lt;</span>function name<span class="op">&gt;</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this syntax, the function <code>&lt;function name&gt;</code> is said to be a <strong>method</strong>. For example, the function <code>with_columns()</code> is a method for the <code>Table</code> object.</p>
 </div>
 </div>
 <p>The <code>datascience</code> module contains a plethora of methods we can use to manage tables. For example, the <code>select()</code> method can be used to select columns by name:</p>
-<div id="54073f83" class="cell" data-execution_count="9">
+<div id="693ba6c2" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>table1.select(<span class="st">"ID"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -468,7 +468,7 @@ Task 4
 </div>
 <div class="callout-body-container callout-body">
 <p>Read the list of methods for Table objects at <a href="http://data8.org/datascience/tables.html">http://data8.org/datascience/tables.html</a>, and write down (in a code cell, using comments) <strong>at least three</strong> different methods, including a short description of what each method does. For example:</p>
-<div id="809c25dc" class="cell" data-execution_count="10">
+<div id="779ed78c" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .with_columns(): adds specified columns to a table.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
@@ -486,7 +486,7 @@ Task 5
 <ol type="a">
 <li>Create the following table, and assign it to a variable called <code>profs</code>:</li>
 </ol>
-<div id="c9ad9f32" class="cell" data-execution_count="11">
+<div id="f47720a3" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display" data-execution_count="6">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
@@ -521,7 +521,7 @@ Task 5
 <li><p>Select the column called <code>Course</code> from <code>profs</code>.</p></li>
 <li><p>Create a new table called <code>profs_new</code> that contains the same rows as the <code>profs</code> table, but with the following additional row:</p></li>
 </ol>
-<div id="3babb66e" class="cell" data-execution_count="12">
+<div id="7a0b2f72" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display" data-execution_count="7">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
@@ -545,7 +545,7 @@ Task 5
 </div>
 </div>
 <p>Suppose we want to select rows of a table that satisfy a given condition. For example, if we wanted to find the information of only people who like Sprite in the <code>table1</code> table above, we would call</p>
-<div id="c5ffde9c" class="cell" data-execution_count="13">
+<div id="1a50107e" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>table1.where(<span class="st">"Fav_Drink"</span>, <span class="st">"Sprite"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -567,7 +567,7 @@ Task 5
 </div>
 </div>
 <p>What would happen if we tried to select the rows of <code>table1</code> with <code>Coke</code> in the <code>Fav_Drink</code> column? Well, since there is nobody in <code>table1</code> that has coke as their favorite drink, we should hope that Python returns an empty table.</p>
-<div id="31f666d4" class="cell" data-execution_count="14">
+<div id="8f78171e" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>table1.where(<span class="st">"Fav_Drink"</span>, <span class="st">"Coke"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
@@ -588,11 +588,11 @@ Task 5
 <section id="arrays" class="level2">
 <h2 class="anchored" data-anchor-id="arrays">Arrays</h2>
 <p>The final Data Structure we will examine in this class is that of an <strong>array</strong>. Arrays behave very similarly to Tables, with a few differences. For one, the syntax used to create an array is slightly different:</p>
-<div id="957752b9" class="cell" data-execution_count="15">
+<div id="f2646009" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>make_array(<span class="op">&lt;</span>item <span class="dv">1</span><span class="op">&gt;</span>, <span class="op">&lt;</span>item <span class="dv">2</span><span class="op">&gt;</span>, <span class="op">&lt;</span>item <span class="dv">3</span><span class="op">&gt;</span>, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For example,</p>
-<div id="ee7af45b" class="cell" data-execution_count="16">
+<div id="4392b0c1" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>make_array(<span class="st">"Spring"</span>, <span class="st">"Summer"</span>, <span class="st">"Autumn"</span>, <span class="st">"Winter"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>array(['Spring', 'Summer', 'Autumn', 'Winter'],
@@ -628,21 +628,21 @@ Task 6
 <section id="comparisons" class="level2">
 <h2 class="anchored" data-anchor-id="comparisons">Comparisons</h2>
 <p>Here’s a question: is <code>2</code> less than <code>3</code>? Well, yes it is! If we wanted to confirm this, we could simply ask Python whether <code>2</code> is less than <code>3</code> by running</p>
-<div id="aaf9905c" class="cell" data-execution_count="17">
+<div id="50e183ae" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">&lt;</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>True</code></pre>
 </div>
 </div>
 <p>Notice, however, <em>how</em> Python answered this question: it simply returned <code>True</code>. Let’s see what the data type of <code>True</code> is:</p>
-<div id="0b25983e" class="cell" data-execution_count="18">
+<div id="53a00ef0" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>bool</code></pre>
 </div>
 </div>
 <p><code>True</code> is of the type <code>bool</code>, which is short for <code>boolean</code>. There are only two boolean quantities in Python: <code>True</code> and <code>False</code>. Let’s see how we can generate a <code>False</code> value:</p>
-<div id="ab17230f" class="cell" data-execution_count="19">
+<div id="2167de55" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">&lt;</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>False</code></pre>
@@ -698,7 +698,7 @@ Task 6
 </tbody>
 </table>
 <p>One nice thing about Python is that it allows for multiple simultaneous comparisons. For example,</p>
-<div id="6c87adf2" class="cell" data-execution_count="20">
+<div id="b4cf7651" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">&lt;</span> <span class="dv">3</span> <span class="op">&lt;</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>True</code></pre>
@@ -720,19 +720,19 @@ Important
 <p>For instance, <code>2 &lt; 3 &lt; 1</code> would return <code>False</code>, because even though <code>2</code> is less than <code>3</code> it is not true that <code>3</code> is less than <code>1</code>.<br>
 </p>
 <p>Believe it or not, you can compare strings as well! Python compares strings <em>alphabetically</em>; that is, letters at the beginning of the alphabet are considered to have smaller ordinal value than letters at the end of the alphabet. For example:</p>
-<div id="4eee43ea" class="cell" data-execution_count="21">
+<div id="393eba34" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">"apple"</span> <span class="op">&lt;</span> <span class="st">"banana"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="e75b3f72" class="cell" data-execution_count="22">
+<div id="bd3753c2" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">"zebra"</span> <span class="op">&lt;</span> <span class="st">"zanzibar"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="c8a15ee6" class="cell" data-execution_count="23">
+<div id="9766fb6b" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">"cat"</span> <span class="op">&lt;=</span> <span class="st">"catenary"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>True</code></pre>
@@ -804,7 +804,7 @@ Task 8
 <li>Otherwise, if they have a zip code of <code>93150</code>, then they are in Montecito</li>
 </ul>
 <p>This is precisely the syntax we would use when translating this experiment into Python syntax:</p>
-<div id="a4023e07" class="cell" data-execution_count="24">
+<div id="3f0e421e" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> zip_code <span class="op">==</span> <span class="dv">93117</span>:</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  location <span class="op">=</span> <span class="st">"Goleta"</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> zip_code <span class="op">==</span> <span class="dv">93120</span>:</span>
@@ -815,7 +815,7 @@ Task 8
 <p>By the way: <code>elif</code> is an abbreviation for <code>else if</code>, which itself can be thought of as equivalent to <code>otherwise, if</code>.<br>
 </p>
 <p>Here’s the general syntax of a conditional expression in Python:</p>
-<div id="2a9b8d45" class="cell" data-execution_count="25">
+<div id="f819933b" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">&lt;</span>condition <span class="dv">1</span><span class="op">&gt;</span>:</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>task <span class="dv">1</span><span class="op">&gt;</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> <span class="op">&lt;</span>condition <span class="dv">2</span><span class="op">&gt;</span>:</span>
@@ -850,7 +850,7 @@ Task 9
 </div>
 <div class="callout-body-container callout-body">
 <p>Consider the code:</p>
-<div id="9d8654ff" class="cell" data-execution_count="26">
+<div id="74b1506c" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">2</span>:</span>
@@ -877,7 +877,7 @@ Caution
 </div>
 </div>
 <p>For example, if instead of the conditional expression in Task 2 we had instead put</p>
-<div id="0698adbf" class="cell" data-execution_count="27">
+<div id="641f4912" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">2</span>:</span>
@@ -906,26 +906,26 @@ Task 10
 </div>
 </div>
 <p>If you recall, the general syntax for calling a function is:</p>
-<div id="37128f4d" class="cell" data-execution_count="28">
+<div id="28ee9b80" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>function name<span class="op">&gt;</span>(<span class="op">&lt;</span>arg1<span class="op">&gt;</span>, <span class="op">&lt;</span>arg2<span class="op">&gt;</span>, ... )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>where <code>&lt;function name&gt;</code> denotes the function name and <code>&lt;arg1&gt;</code>, <code>&lt;arg2&gt;</code>, etc. denote the arguments of the function.<br>
 </p>
 <p>Creating your own function in Python is actually fairly simple! Here is the syntax we use:</p>
-<div id="a2d56fce" class="cell" data-execution_count="29">
+<div id="6d85978d" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="op">&lt;</span>function name<span class="op">&gt;</span>(<span class="op">&lt;</span><span class="bu">list</span> out the argument names<span class="op">&gt;</span>):</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">"""include a 'docstring' here"""</span></span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>body of the function<span class="op">&gt;</span></span>
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="op">&lt;</span>what you want the function to output<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For example,</p>
-<div id="07c9b302" class="cell" data-execution_count="30">
+<div id="6e36fa09" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x, y):</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">"""returns x^2 + y^2"""</span></span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>creates a function <code>f</code> that can be called on two arguments, <code>x</code> and <code>y</code>, and returns the sum of squares of the arguments; e.g.</p>
-<div id="861aa13c" class="cell" data-execution_count="31">
+<div id="4ab19792" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>f(<span class="dv">3</span>, <span class="dv">4</span>)  <span class="co"># should return 3^2 + 4^2 = 25</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>25</code></pre>
@@ -946,7 +946,7 @@ Important
 </div>
 </div>
 <p>For instance,</p>
-<div id="64c4ef44" class="cell" data-execution_count="32">
+<div id="da531ffa" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> g(x, y):</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">"""should return x^2 + y^2"""</span></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> y<span class="op">**</span><span class="dv">2</span></span>
