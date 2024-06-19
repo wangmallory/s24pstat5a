@@ -2,9 +2,9 @@
 title: "PSTAT 5A: Understanding Data"
 subtitle: "Sections and Calendar"
 author:
-  - name: "Ethan Marzban"
+  - name: "Mallory Wang"
     affiliations:
-      - name: "Summer Session A, 2023"
+      - name: "Summer Session A, 2024"
 author-title: "Instructor"
 affiliation-title: "Quarter"
 format: html
@@ -23,14 +23,14 @@ format: html
     </thead>
     <tbody>
       <tr class="odd" style="height: 28px;">
-            <td style="height: 56px;">Olivier Mulkin</td>
-              <td style="height: 56px;"><a class="inline_disabled" href="mailto:omulkin@pstat.ucsb.edu" target="_blank" rel="noopener">omulkin@pstat.ucsb.edu</a></td>
+            <td style="height: 56px;">Daniel Silva</td>
+              <td style="height: 56px;"><a class="inline_disabled" href="mailto:dcsilva@ucsb.edu" target="_blank" rel="noopener">dcsilva@ucsb.edu</a></td>
             <td style="height: 28px;">12:30 - 1:20pm</td>
             <td style="height: 28px;">Phelps 1513</td>
         </tr>
         <tr class="even" style="height: 28px;">
-            <td style="height: 56px;" rowspan="2">Mengrui Zhang</td>
-            <td style="height: 56px;" rowspan="2"><a class="inline_disabled" href="mailto:mengrui@ucsb.edu" target="_blank" rel="noopener">mengrui@ucsb.edu</a></td>
+            <td style="height: 56px;" rowspan="2">Hezhong Zhang</td>
+            <td style="height: 56px;" rowspan="2"><a class="inline_disabled" href="mailto:hzhang586@umail.ucsb.edu" target="_blank" rel="noopener">hzhang586@umail.ucsb.edu</a></td>
             <td style="height: 28px;">2 - 2:50pm</td>
             <td style="height: 28px;">Phelps 1513</td>
         <tr class="even" style="height: 28px;">

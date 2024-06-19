@@ -4,7 +4,7 @@
     "href": "Pages/calendar.html",
     "title": "PSTAT 5A: Understanding Data",
     "section": "",
-    "text": "TA\n\n\nEmail\n\n\nSection Time\n\n\nLocation\n\n\n\n\n\n\nOlivier Mulkin\n\n\nomulkin@pstat.ucsb.edu\n\n\n12:30 - 1:20pm\n\n\nPhelps 1513\n\n\n\n\nMengrui Zhang\n\n\nmengrui@ucsb.edu\n\n\n2 - 2:50pm\n\n\nPhelps 1513\n\n\n\n3 - 3:50pm\n\n\nPhelps 1513",
+    "text": "TA\n\n\nEmail\n\n\nSection Time\n\n\nLocation\n\n\n\n\n\n\nDaniel Silva\n\n\ndcsilva@ucsb.edu\n\n\n12:30 - 1:20pm\n\n\nPhelps 1513\n\n\n\n\nHezhong Zhang\n\n\nhzhang586@umail.ucsb.edu\n\n\n2 - 2:50pm\n\n\nPhelps 1513\n\n\n\n3 - 3:50pm\n\n\nPhelps 1513",
     "crumbs": [
       "Course Info",
       "Sections and Calendar"
@@ -15,7 +15,7 @@
     "href": "Pages/calendar.html#schedule-of-sections",
     "title": "PSTAT 5A: Understanding Data",
     "section": "",
-    "text": "TA\n\n\nEmail\n\n\nSection Time\n\n\nLocation\n\n\n\n\n\n\nOlivier Mulkin\n\n\nomulkin@pstat.ucsb.edu\n\n\n12:30 - 1:20pm\n\n\nPhelps 1513\n\n\n\n\nMengrui Zhang\n\n\nmengrui@ucsb.edu\n\n\n2 - 2:50pm\n\n\nPhelps 1513\n\n\n\n3 - 3:50pm\n\n\nPhelps 1513",
+    "text": "TA\n\n\nEmail\n\n\nSection Time\n\n\nLocation\n\n\n\n\n\n\nDaniel Silva\n\n\ndcsilva@ucsb.edu\n\n\n12:30 - 1:20pm\n\n\nPhelps 1513\n\n\n\n\nHezhong Zhang\n\n\nhzhang586@umail.ucsb.edu\n\n\n2 - 2:50pm\n\n\nPhelps 1513\n\n\n\n3 - 3:50pm\n\n\nPhelps 1513",
     "crumbs": [
       "Course Info",
       "Sections and Calendar"
@@ -2641,6 +2641,41 @@
     "title": "Lab04",
     "section": "Introduction to Loops",
     "text": "Introduction to Loops\nSuppose we have the following outcomes of an experiment:\n\nx = ['success', 'failure', 'failure', 'success', 'failure', 'failure', 'failure', 'success']\n\nHow might we write code to count the number of successes in this string of outcomes? There are several different ways to accomplish this: one involves what is known as a for loop.\n\n\n\nfigure source: https://i.kym-cdn.com/photos/images/newsfeed/001/393/656/da7.jpg\n\n\nHere’s the general idea: we would like to perform an element-wise comparison; that is, we would like to iteratively check whether each element of x is a success or a failure. The “brute-force” way would be to check each element individually, using comparisons:\n\nx[0] == 'success'\n\nTrue\n\n\n\nx[1] == 'success'\n\nFalse\n\n\n\nx[2] == 'success'\n\nFalse\n\n\nAs you can imagine, though, this would get incredibly tedious, especially if x were large! This is where for loops become useful: they allow us to automate this iterative process.\nBefore returning to this success/failure problem, let’s look at an example to see how for loops work.\n\nfor fruit in ['apple', 'banana', 'pear']:\n  print(fruit)\n\napple\nbanana\npear\n\n\nHere are how the different components work:\n\nThe for keyword signifies the beginning of the for loop.\nThe name fruit is the variable.\nThe list following the in keyword contains all of the different values the variable will take during the execution of the for loop.\nThe code after the initial colon : is called the body of the loop. (Note that the body of a for loop must be indented properly!) Here is how the body is executed:\n\nFirst, the variable fruit is assigned the first value in the list of possible values specified in the first line of the loop\nThen, after assigning fruit this value, the code in the body is executed once.\nNext, the variable fruit is assigned the second value of the list of values, and the body is run again.\nThis continues until the list of all possible values is exhausted.\n\n\nSometimes, it may be useful to sketch a diagram/table to keep track of the code at each iteration of the loop:\n\n\n\nFIRST ITERATION\n\n\n\n\nStart of Iteration\n\n\n\n\nfruit: ‘apple’\n\n\n\n\n\n\nEnd of Iteration\n\n\n\n\nfruit: ‘apple’\n\n\n\n\n\n\n\nSECOND ITERATION\n\n\n\n\nStart of Iteration\n\n\n\n\nfruit: ‘banana’\n\n\n\n\n\n\nEnd of Iteration\n\n\n\n\nfruit: ‘banana’\n\n\n\n\n\n\n\nTHIRD ITERATION\n\n\n\n\nStart of Iteration\n\n\n\n\nfruit: ‘pear’\n\n\n\n\n\n\nEnd of Iteration\n\n\n\n\nfruit: ‘pear’\n\n\n\n\n\nIt may seem strange to keep track of the values of the variables at the end of each iteration. The reason we do so is because sometimes the body of the loop will actually change the value of a variable! For example, consider the code\n\nfor n in [1, 2, 3]:\n  n += 2\n  print(n)\n\n3\n4\n5\n\n\nthe associated diagram would look like\n\n\n\nFIRST ITERATION\n\n\n\n\nStart of Iteration\n\n\n\n\nn: 1\n\n\n\n\n\n\nEnd of Iteration\n\n\n\n\nn: 3\n\n\n\n\n\n\n\nSECOND ITERATION\n\n\n\n\nStart of Iteration\n\n\n\n\nn: 2\n\n\n\n\n\n\nEnd of Iteration\n\n\n\n\nn: 4\n\n\n\n\n\n\n\nTHIRD ITERATION\n\n\n\n\nStart of Iteration\n\n\n\n\nn: 3\n\n\n\n\n\n\nEnd of Iteration\n\n\n\n\nn: 5\n\n\n\n\n\nBy the way, notice the shorthand notation += that was used above:\n\n\n\n\n\n\nTip\n\n\n\nThe code x += y is equivalent to x = x + y.\n\n\nFinally, one thing that should be mentioned is that you can call the variable in a loop whatever you like!\n\nfor yummy in ['apple', 'banana', 'pear']:\n  print(yummy)\n\napple\nbanana\npear\n\n\n\n\n\n\n\n\nTask 8\n\n\n\nCopy-paste the code\n\nx = ['success', 'failure', 'failure', 'success', 'failure', 'failure', 'failure', 'success']\n\ninto a cell, and run it. Then, create a for loop that iterates through the elements of x and at each iteration prints True if the corresponding element of x is a 'success' and False if the corresponding element of x is a 'failure'. Your final output should look like:\n\n\nTrue\nFalse\nFalse\nTrue\nFalse\nFalse\nFalse\nTrue\n\n\n\n\nBy the way, the set of values a variable will take during a for loop doesn’t have to be a list- it could also be an array! This is particularly useful when there are multiple things we would like to iterate over. For example:\n\nimport datascience as ds\ncredit_scores = ds.make_array(\n  [\"Anne\", 750],\n  [\"Barbara\", 755],\n  [\"Cassandra\", 745]\n)\n\nfor k in credit_scores:\n  print(k[0], \"has a credit score of\", k[1])\n\nAnne has a credit score of 750\nBarbara has a credit score of 755\nCassandra has a credit score of 745\n\n\n\n\n\n\n\n\nTask 9\n\n\n\nMake a table like the one above that keeps track of the variables and their values in the above loop. You do not need to turn this in; do it on a separate sheet of paper and in your .ipynb file simply state “I have done Task 2 on a separate sheet of paper.”\n\n\nNow, we never quite finished our problem of counting the number of successes in the variable x. We were able to iterate through the elements of x to determine which were successes and which were failures, but we never counted the number of successes.\n\nHere is the general idea:\n\nWe initialize a counter variable, which starts off with the value of 0.\nThen, we iterate through the elements of x as we did in Task 1 above. Instead of printing True or False, however, we use a conditional statement to add 1 to count if the corresponding element of x (i.e. the element of x under consideration in the current iteration of the loop).\nFinally, we see what the value of our counter variable is- this will be exactly the number of successes in x!\n\n\n\n\n\n\n\nTask 10\n\n\n\nCombine everything we’ve learned so far to count the number of successes in x. Here is a rough template of how your code should look:\n\ncount = 0     # initialize the counter variable\n\n&lt;for loop code here, containing a conditional and a 'count += 1'&gt;\n\ncount       # display the final value of our counter variable\n\n\n\nThere is another way to iterate through the elements in a list, and this is to use indexing. Before talking about how this works, we should quickly introduce another function: the arange() function from the numpy module. Here is how a general call to numpy.arange() works:\n\nnumpy.arange(a, b, n)\n\nThis code returns the array of evenly spaced integers between a and b - including a but excluding b, where each element is s more than the previous element. That is, the code above is equivalent to array([a, a+s, a+2s, ...]) As a concrete example:\n\nimport numpy as np\nnp.arange(0, 5, 2)\n\narray([0, 2, 4])\n\n\nThe arange() function is particularly useful when we are iterating using indices. For example, given a list x = [1, 2, 3, 4, 5], we can loop through the entries of x using:\n\nfor k in np.arange(0, len(x)):\n  print(x[k])\n\n1\n2\n3\n4\n5\n\n\nNote that this is equivalent to\n\nfor k in x:\n  print(k)\n\n1\n2\n3\n4\n5\n\n\n\n\n\n\n\n\nTask 11\n\n\n\nRewrite your loop from Task 10, except now iterate through the indices of x. Check that your output is the same as in Task 10.\n\n\n\nQuick Aside: arange() vs linspace()\nSome of you may recall that we previously used the numpy.linspace() function to generate a list of numbers between two specified endpoints. The key difference between these two functions is that:\n\narange() allows you to specify the step size\nlinspace() allows you to specify the final number of elements\n\n\n\n\n\n\n\nTask 12\n\n\n\nGenerate the list of numbers [1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 2.9, 2] in two ways: one using arange() and the other using linspace()."
+  },
+  {
+    "objectID": "Files/Labs/Lab05_Solns.html",
+    "href": "Files/Labs/Lab05_Solns.html",
+    "title": "Section 1: Markdown Syntax",
+    "section": "",
+    "text": "The quick brown fox jumps over the lazy dog.\n\nThat was a really cool sentence!"
+  },
+  {
+    "objectID": "Files/Labs/Lab05_Solns.html#subsection-1.1",
+    "href": "Files/Labs/Lab05_Solns.html#subsection-1.1",
+    "title": "Section 1: Markdown Syntax",
+    "section": "",
+    "text": "The quick brown fox jumps over the lazy dog.\n\nThat was a really cool sentence!"
+  },
+  {
+    "objectID": "Files/Labs/Lab05_Solns.html#subsection-1.2-itemized-and-enumerated-lists",
+    "href": "Files/Labs/Lab05_Solns.html#subsection-1.2-itemized-and-enumerated-lists",
+    "title": "Section 1: Markdown Syntax",
+    "section": "Subsection 1.2: Itemized and Enumerated Lists",
+    "text": "Subsection 1.2: Itemized and Enumerated Lists\n\nIt is very important to check the Binomial Conditions before using the Binomial Distribution!\n\nFailure to check the necessary conditions can lead to incorrect results.\nIncorrect results are not good!"
+  },
+  {
+    "objectID": "Files/Labs/Lab05_Solns.html#subsection-1.3-typesetting-equations",
+    "href": "Files/Labs/Lab05_Solns.html#subsection-1.3-typesetting-equations",
+    "title": "Section 1: Markdown Syntax",
+    "section": "Subsection 1.3: Typesetting Equations",
+    "text": "Subsection 1.3: Typesetting Equations\nThe Pythagorean Theorem states that \\(a^2 + b^2 = c^2\\)\n\\[ f_X(x) = \\frac{1}{\\sigma \\sqrt{2\\pi}} e^{-\\frac{1}{2} \\left( \\frac{x - \\mu}{\\sigma} \\right)^2} \\]\n\nPythagorean Theorem: \\(a^2 + b^2 = c^2\\)\nEuler’s Identity: \\(e^{i \\pi} + 1 = 0\\)\n\n\\[\nf_X(x) = \\begin{cases}\n    \\frac{1}{b - a} & \\text{if } a \\leq x \\leq b\\\\\n    0 & \\text{otherwise}\n    \\end{cases}\n\\]\n\\[\\begin{align*}\n    \\overline{x} & = \\frac{1}{n} \\sum_{i=1}^{n} x_i \\\\\n    n \\overline{x} & = \\sum_{i=1}^{n} x_i\n\\end{align*}\\]"
+  },
+  {
+    "objectID": "Files/Labs/Lab05_Solns.html#section-1.4-hyperlinks",
+    "href": "Files/Labs/Lab05_Solns.html#section-1.4-hyperlinks",
+    "title": "Section 1: Markdown Syntax",
+    "section": "Section 1.4: Hyperlinks",
+    "text": "Section 1.4: Hyperlinks\nPSTAT Department Website"
   },
   {
     "objectID": "index.html",

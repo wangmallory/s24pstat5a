@@ -210,7 +210,7 @@ window.Quarto = {
 <p>If you recall, one of the first things we did in Lab (back in Week 1!) was to use Python as a calculator. At the time, we only used Python to compute relatively simple quantities. Now that we’ve talked a bit about distributions, you can see how Python might be able to simpliy our lives greatly!</p>
 <p>For instance, take the probability mass function (p.m.f.) of the <span class="math inline">\(\mathrm{Bin}(n, p)\)</span> distribution: if <span class="math inline">\(X \sim \mathrm{Bin}(n, p)\)</span>, then <span class="math display">\[ \mathbb{P}(X = k) = \binom{n}{k} \cdot p^k \cdot (1 - p)^{n - k} \]</span> Can we get Python to compute this for us? Or, remember how when we want to find areas under a normal density curve we have to use tables- can we perhaps compute these areas using Python?</p>
 <p>The answer to both of these questions is, naturally, “yes”! Specifically, we will make use of the <code>scipy.stats</code> module which contains a plethora of functions relating to the distributions we learned in this class (as well as other distributions we won’t have time to cover).</p>
-<div id="b9e03318" class="cell" data-execution_count="1">
+<div id="7d59a88c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> sps</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let’s tackle the Binomial distribution first. The function <code>sps.binom.pmf()</code> allows us to compute the p.m.f. of the Binomial distribution (with specified parameters) at a particular point.</p>
@@ -234,7 +234,7 @@ Task 1
 <p>Now, let’s talk about areas under the normal curve. If we want to find the following area:</p>
 <p><img src="tail_area.svg" class="img-fluid" style="width:60.0%"></p>
 <p>we would run the following code:</p>
-<div id="6f60f389" class="cell" data-execution_count="2">
+<div id="05ae902c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sps.norm.cdf(t, mu, sigma)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -276,7 +276,7 @@ Task 3
 <p>As we have seen in lecture, confidence intervals for a population parameter <span class="math inline">\(\theta\)</span> take the form <span class="math display">\[ \widehat{\theta} \pm c \cdot \mathrm{s.e.} \]</span> where <span class="math inline">\(\mathrm{s.e.}\)</span> denotes the standard error (i.e.&nbsp;standard deviation) of the point estimator <span class="math inline">\(\widehat{\Theta}\)</span>, and <span class="math inline">\(c\)</span> is an appropriately-selected percentile from the distribution of <span class="math inline">\(\widehat{\Theta}\)</span>.</p>
 <p>Up until now, we have primarily been finding the constant <span class="math inline">\(c\)</span> using the various tables at our disposal. Though being able to read these tables is a useful skill (and a skill that is potentially testable on quizzes and exams…), using computers to compute these percentiles can greatly increase efficiency.</p>
 <p>The syntax</p>
-<div id="8aa0281e" class="cell" data-execution_count="3">
+<div id="0e6ed7eb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>scipy.stats.norm.ppf(p, m, s)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>computes the <code>p</code><sup>th</sup> percentile of the <span class="math inline">\(\mathcal{N}\)</span>(<code>m</code>, <code>s</code>) distribution. We will revisit this fairly soon, once we are exposed to another continuous distribution in a few lectures. There are analagous functions that allow us to compute percentiles of other distributions; for example, <code>scipy.stats.t.ppf()</code> can be used to find the percentiles of the <span class="math inline">\(t\)</span> distribution.</p>
@@ -306,7 +306,7 @@ Task 4
 </blockquote>
 <p>This is actually a great definition: simulations are designed to <em>simulate</em> (i.e.&nbsp;mimic) real-world situations to generate new observations/outcomes that (we hope) closely resemble the real-world outcomes.</p>
 <p>For example, suppose we believe that weights of rats in a particular situation are normally distributed with mean 3.8oz and a standard deviation of 0.5oz. Instead of actually going out and collecting the weights of, say, 10 different rats and recording them, we could <em>simulate</em> collecting these weights by generating a series of random numbers that follow the <span class="math inline">\(\mathcal{N}(3.8, \ 0.5)\)</span> distribution:</p>
-<div id="e18832e1" class="cell" data-execution_count="4">
+<div id="0bb4480e" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>array([3.2571847 , 4.29867272, 3.94148925, 3.04685264, 3.51069987,
        4.62571827, 2.58666038, 3.58554369, 4.43296813, 3.3666298 ])</code></pre>
@@ -314,11 +314,11 @@ Task 4
 </div>
 <p>There are (once again) several modules that contain functions designed to simulate draws from different distributions: for now, we’ll stick with the <code>scipy.stats</code> module.</p>
 <p>To simulate <code>n</code> draws from a <span class="math inline">\(\mathcal{N}(\)</span><code>mu</code>, <code>sigma</code><span class="math inline">\()\)</span> distribution we use the code</p>
-<div id="7e1aca05" class="cell" data-execution_count="5">
+<div id="a8bafde0" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sps.norm.rvs(mu, sigma, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>(note that, by default, the sample size comes at the end!) To simulate <code>n</code> draws from a <span class="math inline">\(\mathrm{Unif}(\)</span><code>a</code>, <code>b</code><span class="math inline">\()\)</span> distribution we use the code</p>
-<div id="ec17bba1" class="cell" data-execution_count="6">
+<div id="648e3b13" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sps.uniform.rvs(a, b, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -368,7 +368,7 @@ Task 7
 <li><p>Write <code>npr.choice([1, 2, 3], size = 4)</code> in a code cell, and run it three times. In a Markdown cell just below this cell, answer the following question: did you get the same result each time you ran the code cell?</p></li>
 <li><p>In a new code cell write</p></li>
 </ol>
-<div id="59f58da3" class="cell" data-execution_count="7">
+<div id="bd177b9d" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>npr.seed(<span class="dv">15</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>npr.choice([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], size <span class="op">=</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -384,7 +384,7 @@ Task 7
 <section id="introduction-to-loops" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-loops">Introduction to Loops</h2>
 <p>Suppose we have the following outcomes of an experiment:</p>
-<div id="31bfd909" class="cell" data-execution_count="8">
+<div id="4338cf15" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="st">'success'</span>, <span class="st">'failure'</span>, <span class="st">'failure'</span>, <span class="st">'success'</span>, <span class="st">'failure'</span>, <span class="st">'failure'</span>, <span class="st">'failure'</span>, <span class="st">'success'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>How might we write code to count the number of successes in this string of outcomes? There are several different ways to accomplish this: one involves what is known as a <strong><code>for</code> loop</strong>.</p>
@@ -395,19 +395,19 @@ Task 7
 </figure>
 </div>
 <p>Here’s the general idea: we would like to perform an element-wise comparison; that is, we would like to iteratively check whether <em>each element</em> of <code>x</code> is a success or a failure. The “brute-force” way would be to check each element individually, using comparisons:</p>
-<div id="7bc4f15b" class="cell" data-execution_count="9">
+<div id="6cd7a2fe" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">0</span>] <span class="op">==</span> <span class="st">'success'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>True</code></pre>
 </div>
 </div>
-<div id="e8eb41cf" class="cell" data-execution_count="10">
+<div id="087b03f2" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">1</span>] <span class="op">==</span> <span class="st">'success'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>False</code></pre>
 </div>
 </div>
-<div id="e8846a27" class="cell" data-execution_count="11">
+<div id="44487551" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>] <span class="op">==</span> <span class="st">'success'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>False</code></pre>
@@ -415,7 +415,7 @@ Task 7
 </div>
 <p>As you can imagine, though, this would get incredibly tedious, especially if <code>x</code> were large! This is where <code>for</code> loops become useful: they allow us to automate this iterative process.</p>
 <p>Before returning to this success/failure problem, let’s look at an example to see how <code>for</code> loops work.</p>
-<div id="f94c4cf2" class="cell" data-execution_count="12">
+<div id="cdeda11d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> [<span class="st">'apple'</span>, <span class="st">'banana'</span>, <span class="st">'pear'</span>]:</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -530,7 +530,7 @@ pear</code></pre>
 </tr>
 </tbody></table>
 <p>It may seem strange to keep track of the values of the variables at the end of each iteration. The reason we do so is because sometimes the body of the loop will actually change the value of a variable! For example, consider the code</p>
-<div id="7bd8ad97" class="cell" data-execution_count="13">
+<div id="2e5dd39b" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]:</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  n <span class="op">+=</span> <span class="dv">2</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -647,7 +647,7 @@ Tip
 </div>
 </div>
 <p>Finally, one thing that should be mentioned is that you can call the variable in a loop whatever you like!</p>
-<div id="f38a52fb" class="cell" data-execution_count="14">
+<div id="1a2c4c46" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> yummy <span class="kw">in</span> [<span class="st">'apple'</span>, <span class="st">'banana'</span>, <span class="st">'pear'</span>]:</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(yummy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -667,11 +667,11 @@ Task 8
 </div>
 <div class="callout-body-container callout-body">
 <p>Copy-paste the code</p>
-<div id="53f39611" class="cell" data-execution_count="15">
+<div id="acbf2aaf" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="st">'success'</span>, <span class="st">'failure'</span>, <span class="st">'failure'</span>, <span class="st">'success'</span>, <span class="st">'failure'</span>, <span class="st">'failure'</span>, <span class="st">'failure'</span>, <span class="st">'success'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>into a cell, and run it. Then, create a <code>for</code> loop that iterates through the elements of <code>x</code> and at each iteration prints <code>True</code> if the corresponding element of <code>x</code> is a <code>'success'</code> and <code>False</code> if the corresponding element of <code>x</code> is a <code>'failure'</code>. Your final output should look like:</p>
-<div id="4bf90686" class="cell" data-execution_count="16">
+<div id="1fd8a42c" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
 <pre><code>True
 False
@@ -686,7 +686,7 @@ True</code></pre>
 </div>
 </div>
 <p>By the way, the set of values a variable will take during a <code>for</code> loop doesn’t have to be a list- it could also be an array! This is particularly useful when there are multiple things we would like to iterate over. For example:</p>
-<div id="8ddebf02" class="cell" data-execution_count="17">
+<div id="2ea30fa3" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datascience <span class="im">as</span> ds</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>credit_scores <span class="op">=</span> ds.make_array(</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Anne"</span>, <span class="dv">750</span>],</span>
@@ -734,7 +734,7 @@ Task 10
 </div>
 <div class="callout-body-container callout-body">
 <p>Combine everything we’ve learned so far to count the number of successes in <code>x</code>. Here is a rough template of how your code should look:</p>
-<div id="d71b2c4b" class="cell" data-execution_count="18">
+<div id="5dbd847c" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span>     <span class="co"># initialize the counter variable</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span><span class="cf">for</span> loop code here, containing a conditional <span class="kw">and</span> a <span class="st">'count += 1'</span><span class="op">&gt;</span></span>
@@ -744,11 +744,11 @@ Task 10
 </div>
 </div>
 <p>There is another way to iterate through the elements in a list, and this is to use indexing. Before talking about how this works, we should quickly introduce another function: the <code>arange()</code> function from the <code>numpy</code> module. Here is how a general call to <code>numpy.arange()</code> works:</p>
-<div id="443aab1c" class="cell" data-execution_count="19">
+<div id="4edcc11b" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>numpy.arange(a, b, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This code returns the array of evenly spaced integers between <code>a</code> and <code>b</code> - including <code>a</code> but <em>excluding</em> <code>b</code>, where each element is <code>s</code> more than the previous element. That is, the code above is equivalent to <code>array([a, a+s, a+2s, ...])</code> As a concrete example:</p>
-<div id="b072c071" class="cell" data-execution_count="20">
+<div id="5a49d6cf" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>np.arange(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
@@ -756,7 +756,7 @@ Task 10
 </div>
 </div>
 <p>The <code>arange()</code> function is particularly useful when we are iterating using indices. For example, given a list <code>x = [1, 2, 3, 4, 5]</code>, we can loop through the entries of <code>x</code> using:</p>
-<div id="fe389363" class="cell" data-execution_count="22">
+<div id="55337054" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> np.arange(<span class="dv">0</span>, <span class="bu">len</span>(x)):</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(x[k])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -768,7 +768,7 @@ Task 10
 </div>
 </div>
 <p>Note that this is equivalent to</p>
-<div id="67ee652d" class="cell" data-execution_count="23">
+<div id="f2a71793" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> x:</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(k)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
