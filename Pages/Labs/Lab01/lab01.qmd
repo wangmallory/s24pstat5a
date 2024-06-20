@@ -2,9 +2,9 @@
 title: "Lab01"
 subtitle: "Getting to Know Python"
 author:
-  - name: "PSTAT 5A, with Ethan Marzban"
+  - name: "PSTAT 5A"
     affiliations:
-      - name: "Summer Session A, 2023"
+      - name: "Summer Session A, 2024"
 author-title: "Course"
 affiliation-title: "Quarter"
 format: html
